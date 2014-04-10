@@ -2,7 +2,7 @@
   "name": "center-line",
   "main": "./lib/center-line",
   "author": "Michael Kleehammer <michael@kleehammer.com>",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Cycles cursor between center, top, and bottom of screen",
   "activationEvents": [
     "center-line:toggle"

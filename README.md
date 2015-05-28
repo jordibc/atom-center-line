@@ -1,5 +1,7 @@
 # center-line package
 
+**This package has been unpublished because I am no longer using Atom.  Let me know if you are willing to take this project over.**
+
 Scrolls the cursor to the center of the screen.  Repeat to cycle between the center, top, and
 bottom of the screen.
 

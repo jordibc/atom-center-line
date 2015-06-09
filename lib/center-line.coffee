@@ -1,4 +1,6 @@
 
+editorState = new WeakMap()
+
 module.exports =
   activate: (state) ->
     atom.commands.add "atom-text-editor",
@@ -25,8 +27,7 @@ module.exports =
       return
 
     # Figure out where we are and where we want to go.
-
-    here = @whereAreWe(rows)
+    here = editorState.get(editor) or 'other';
 
     cycles =
       center: 'first'
@@ -48,21 +49,10 @@ module.exports =
       averageLineHeight = editor.getHeight() / (rows.last - rows.first);
       pixel -= editor.getHeight() - averageLineHeight * 2
 
-    editor.setScrollTop(pixel)
+    editor.setScrollTop pixel
+    editorState.set editor, goto
 
-  whereAreWe: (rows) ->
-    # Normally we just compare the cursor to the 3 interesting rows.  However if we are near
-    # the top or bottom of the document we won't be able to scroll the cursor all the way to
-    # the top or bottom of the window.  Check for those cases first.
-
-    if rows.last is rows.final
-      'first'
-    else if rows.first is 0
-      'last'
-    else
-      slack = 1
-      for key in ['first', 'center', 'last']
-        row = rows[key]
-        if (row - slack) <= rows.cursor <= (row + slack)
-          return key
-      'other'
+    disposable = editor.onDidChangeCursorPosition =>
+        console.log 'dispose'
+        editorState.delete editor
+        disposable.dispose()

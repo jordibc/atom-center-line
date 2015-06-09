@@ -1,12 +1,15 @@
 {
   "name": "center-line",
   "main": "./lib/center-line",
-  "author": "Michael Kleehammer <michael@kleehammer.com>",
-  "version": "1.1.0",
-  "description": "Cycles cursor between center, top, and bottom of screen",
-  "activationEvents": [
-    "center-line:toggle"
+  "author": [
+    "Michael Kleehammer <michael@kleehammer.com>",
+    "Knut Helland <knutoh@gmail.com>"
   ],
+  "version": "1.1.1",
+  "description": "Cycles cursor between center, top, and bottom of screen",
+  "activationCommands": {
+    "atom-text-editor": ["center-line:toggle"]
+  },
   "repository": "https://github.com/mkleehammer/atom-center-line",
   "bugs": "https://github.com/mkleehammer/atom-center-line/issues",
   "license": "MIT",

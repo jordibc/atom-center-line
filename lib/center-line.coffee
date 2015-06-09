@@ -1,17 +1,17 @@
 
 module.exports =
   activate: (state) ->
-    atom.workspaceView.command "center-line:toggle", => @toggle()
+    atom.commands.add "atom-text-editor",
+        "center-line:toggle": () => @toggle()
 
   toggle: ->
-    view = atom.workspaceView.getActiveView()
-    editor = view?.getEditor()
+    editor = atom.workspace.getActiveTextEditor()
     if not editor?
       return
 
     # Get the cursor position and screen boundaries
-
     cursor = editor.getCursorScreenPosition()
+    view = atom.views.getView(editor);
 
     rows =
       first: view.getFirstVisibleScreenRow()
@@ -41,13 +41,14 @@ module.exports =
     pixel = view.pixelPositionForScreenPosition(cursor).top
 
     if goto is 'center'
-      pixel -= (view.scrollView.height() / 2);
+      pixel -= (editor.getHeight() / 2);
     else if goto is 'last'
       # Back up two lines since the scrollbar height doesn't seem to be accounted
       # for in scrollView.height.  Make sure slack is at last one
-      pixel -= view.scrollView.height() - view.lineHeight * 2
+      averageLineHeight = editor.getHeight() / (rows.last - rows.first);
+      pixel -= editor.getHeight() - averageLineHeight * 2
 
-    view.scrollTop(pixel)
+    editor.setScrollTop(pixel)
 
   whereAreWe: (rows) ->
     # Normally we just compare the cursor to the 3 interesting rows.  However if we are near

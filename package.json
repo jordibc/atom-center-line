@@ -5,10 +5,12 @@
     "Michael Kleehammer <michael@kleehammer.com>",
     "Knut Helland <knutoh@gmail.com>"
   ],
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Cycles cursor between center, top, and bottom of screen",
   "activationCommands": {
-    "atom-text-editor": ["center-line:toggle"]
+    "atom-text-editor": [
+      "center-line:toggle"
+    ]
   },
   "repository": "https://github.com/mkleehammer/atom-center-line",
   "bugs": "https://github.com/mkleehammer/atom-center-line/issues",

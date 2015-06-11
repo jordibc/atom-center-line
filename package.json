@@ -12,8 +12,8 @@
       "center-line:toggle"
     ]
   },
-  "repository": "https://github.com/mkleehammer/atom-center-line",
-  "bugs": "https://github.com/mkleehammer/atom-center-line/issues",
+  "repository": "https://github.com/knuthelland/atom-center-line",
+  "bugs": "https://github.com/knuthelland/atom-center-line/issues",
   "license": "MIT",
   "engines": {
     "atom": ">0.50.0"

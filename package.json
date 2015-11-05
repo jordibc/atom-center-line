@@ -5,7 +5,7 @@
     "Michael Kleehammer <michael@kleehammer.com>",
     "Knut Helland <knutoh@gmail.com>"
   ],
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Cycles cursor between center, top, and bottom of screen",
   "activationCommands": {
     "atom-text-editor": [

@@ -42,14 +42,14 @@ module.exports =
     pixel = view.pixelPositionForScreenPosition(cursor).top
 
     if goto is 'center'
-      pixel -= (editor.getHeight() / 2);
+      pixel -= (view.getHeight() / 2);
     else if goto is 'last'
       # Back up two lines since the scrollbar height doesn't seem to be accounted
       # for in scrollView.height.  Make sure slack is at last one
-      averageLineHeight = editor.getHeight() / (rows.last - rows.first);
-      pixel -= editor.getHeight() - averageLineHeight * 2
+      averageLineHeight = view.getHeight() / (rows.last - rows.first);
+      pixel -= view.getHeight() - averageLineHeight * 2
 
-    editor.setScrollTop pixel
+    view.setScrollTop pixel
     editorState.set editor, goto
 
     disposable = editor.onDidChangeCursorPosition =>

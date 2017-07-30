@@ -3,8 +3,5 @@
 # would be nice if packages automatically overrode core and user automatically overrode
 # packages.
 
-'.platform-darwin atom-workspace atom-text-editor:not(.mini)':
-  'ctrl-l': 'center-line:toggle'
-
-'.platform-linux atom-workspace atom-text-editor:not(.mini)':
+'atom-workspace atom-text-editor:not(.mini)':
   'ctrl-l': 'center-line:toggle'

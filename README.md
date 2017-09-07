@@ -1,3 +1,7 @@
+**Needs new maintainer**
+
+I'm not using Atom anymore, but I'll gladly give ownership to someone who wants to maintain it.
+
 # center-line package
 
 Scrolls the cursor to the center of the screen.  Repeat to cycle between the center, top, and

@@ -1,7 +1,3 @@
-**Needs new maintainer**
-
-I'm not using Atom anymore, but I'll gladly give ownership to someone who wants to maintain it.
-
 # center-line package
 
 Scrolls the cursor to the center of the screen.  Repeat to cycle between the center, top, and
@@ -13,4 +9,4 @@ to the center of the screen if the cursor is already visible.
 
 It is bound to `ctrl-l` which overrides the built-in.
 
-Once Atom's core is in a public repository, I'd like to propose this get moved into the core to replace Scroll To Cursor since it is a simple but useful superset of it.
+Once Atom's core is in a public repository, this could get moved into the core to replace Scroll To Cursor since it is a simple but useful superset of it.

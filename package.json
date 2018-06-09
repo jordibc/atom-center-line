@@ -6,7 +6,7 @@
     "Knut Helland <knutoh@gmail.com>",
     "Jordi Burguet-Castell <jordi.burguet.castell@gmail.com>"
   ],
-  "version": "1.3.1",
+  "version": "1.4.0",
   "description": "Cycles cursor between center, top, and bottom of screen",
   "activationCommands": {
     "atom-text-editor": [
